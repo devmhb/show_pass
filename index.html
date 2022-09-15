@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #password{
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="password" id="password"><br>
+    <input type="checkbox" id="showpass" >show password
+
+    <script>
+        const pass = document.querySelector("#password"); let newPass = pass.getAttribute("password")
+        const checkPass = document.querySelector("#showpass");
+        checkPass.addEventListener("click", () => {
+            if(pass.type=="password"){
+               pass.type = "text"
+            }
+        })
+    </script>
+</body>
+</html>
